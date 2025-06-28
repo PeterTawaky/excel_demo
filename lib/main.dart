@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       home: BlocProvider(
         create: (context) {
           final cubit = LoadingDataCubit();
-          cubit.continuousReadingExcelData();
+          cubit.readExcelFromAssets('assets/tags.xlsx');
           return cubit;
         },
         child: const HomeView(),

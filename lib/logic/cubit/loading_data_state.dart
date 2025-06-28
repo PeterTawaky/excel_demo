@@ -8,8 +8,8 @@ final class LoadingDataInitial extends LoadingDataState {}
 final class LoadingDataLoading extends LoadingDataState {}
 
 final class LoadingDataSuccess extends LoadingDataState {
-  final List<String> data;
-  LoadingDataSuccess(this.data);
+  final List<TagModel> tags;
+  LoadingDataSuccess({required this.tags});
 }
 
 final class LoadingDataFailed extends LoadingDataState {

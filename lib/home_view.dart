@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget {
           if (state is LoadingDataLoading) {
             return const Center(child: CircularProgressIndicator());
           } else if (state is LoadingDataSuccess) {
-            return CustomVerticalList(dataCell: state.data);
+            return CustomVerticalList(tags: state.tags);
           } else if (state is LoadingDataFailed) {
             return Center(child: Text(state.error));
           }

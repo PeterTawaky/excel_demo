@@ -1,10 +1,9 @@
-import 'package:excel_demo/logic/cubit/loading_data_cubit.dart';
+import 'package:excel_demo/model/tag_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomVerticalList extends StatelessWidget {
-  final List<String> dataCell;
-  const CustomVerticalList({super.key, required this.dataCell});
+  final List<TagModel> tags;
+  const CustomVerticalList({super.key, required this.tags});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +11,11 @@ class CustomVerticalList extends StatelessWidget {
       direction: Axis.horizontal,
       spacing: 10,
       runSpacing: 10,
-      children: List.generate(dataCell.length, (index) {
+      children: List.generate(tags.length, (index) {
         return Container(
           color: Colors.teal,
           width: 300,
-          child: Text(dataCell[index]),
+          child: Text(tags[index].tagName),
         );
       }),
     );
