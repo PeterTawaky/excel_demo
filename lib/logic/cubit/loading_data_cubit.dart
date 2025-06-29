@@ -7,7 +7,6 @@ part 'loading_data_state.dart';
 
 class LoadingDataCubit extends Cubit<LoadingDataState> {
   LoadingDataCubit() : super(LoadingDataInitial());
-  // List excelData = [];
   void readExcelFromAssets(String localExcelPath) async {
     emit(LoadingDataLoading());
     try {

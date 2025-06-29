@@ -1,0 +1,10 @@
+^D:\HA_TECHNOLOGY\EXCEL_DEMO\BUILD\WINDOWS\X64\CMAKEFILES\80CA71DFCB1841FFB675E680755EFD5C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/ha_technology/excel_demo/windows -BD:/ha_technology/excel_demo/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/ha_technology/excel_demo/build/windows/x64/excel_demo.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
